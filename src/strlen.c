@@ -1,5 +1,5 @@
-#include "strlen.h"
 #include <stddef.h>
+#include <strlen/strlen.h>
 
 int my_strlen(char const *s) {
     if (s == NULL) {

@@ -1,9 +1,5 @@
 include(GenerateExportHeader)
 
-set(CMAKE_CXX_VISIBILITY_PRESET hidden)
-set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS no)
-set(CMAKE_VISIBILITY_INLINES_HIDDEN 1)
-
 add_library(strlen)
 add_library(strlen::strlen ALIAS strlen)
 generate_export_header(strlen EXPORT_FILE_NAME
@@ -11,7 +7,8 @@ generate_export_header(strlen EXPORT_FILE_NAME
 target_include_directories(
   strlen
   INTERFACE $<BUILD_INTERFACE:${STRLEN_GENERATED_INCLUDEDIR}>
-  PRIVATE ${STRLEN_GENERATED_INCLUDEDIR})
+            $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+  PRIVATE ${STRLEN_GENERATED_INCLUDEDIR} ${CMAKE_SOURCE_DIR}/include)
 target_sources(strlen PRIVATE strlen.c)
 target_compile_options(
   strlen
