@@ -3,6 +3,9 @@ cmake_minimum_required(VERSION 3.17 FATAL_ERROR)
 project(
   strlen
   VERSION 0.0.1
+  DESCRIPTION
+    "A sample implementation of the standard C library’s strlen function"
+  HOMEPAGE_URL https://github.com/jwillikers/strlen
   LANGUAGES C CXX)
 
 include(CTest)
