@@ -1,10 +1,11 @@
 #pragma once
+#include <strlen/export.h>
 
 // Convert a string to an integer.
 // Zero is returned if a null pointer is passed in or a conversion can not be
 // performed.
 #ifdef __cplusplus
-extern "C" int my_strlen(char const *c);
+extern "C" STRLEN_EXPORT int my_strlen(char const *c);
 #else
-int my_strlen(char const *c);
+STRLEN_EXPORT int my_strlen(char const *c);
 #endif
