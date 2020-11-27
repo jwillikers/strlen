@@ -343,11 +343,32 @@ _ZSH_::
 ----
 --
 
-. Add asdf plugins for direnv, CMake, ccache, and Ninja.
+. Add the asdf ccache plugin.
 +
 [source,sh]
 ----
-➜ asdf plugin add ccache cmake direnv ninja
+➜ asdf plugin add ccache
+----
+
+. Add the asdf CMake plugin.
++
+[source,sh]
+----
+➜ asdf plugin add cmake
+----
+
+. Add the asdf direnv plugin.
++
+[source,sh]
+----
+➜ asdf plugin add direnv
+----
+
+. Add the asdf Ninja plugin.
++
+[source,sh]
+----
+➜ asdf plugin add ninja
 ----
 
 . Integrate direnv with your shell.
